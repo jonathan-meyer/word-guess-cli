@@ -1,0 +1,31 @@
+{
+  "name": "word-guess-cli",
+  "version": "1.0.0",
+  "description": "Hangman on the Command Line",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathan-meyer/word-guess-cli.git"
+  },
+  "keywords": [
+    "game",
+    "cli"
+  ],
+  "author": "Jonathan Meyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathan-meyer/word-guess-cli/issues"
+  },
+  "homepage": "https://github.com/jonathan-meyer/word-guess-cli#readme",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "inquirer": "^6.3.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
