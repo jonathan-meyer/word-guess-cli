@@ -11,11 +11,13 @@ function Word(word) {
 
   Object.defineProperty(this, "value", {
     value: word.split("").map(c => new Letter(c)),
-    writable: false
+    writable: false,
+    enumerable: true
   });
 
   Object.defineProperty(this, "isSolved", {
-    get: () => this.value.filter(l => !l.isVisible).length === 0
+    get: () => this.value.filter(l => !l.isVisible).length === 0,
+    enumerable: true
   });
 }
 

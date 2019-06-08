@@ -15,7 +15,8 @@ function Letter(character) {
 
   Object.defineProperty(this, "value", {
     value: character,
-    writable: false
+    writable: false,
+    enumerable: true
   });
 
   Object.defineProperty(this, "isWhitespace", {
@@ -30,7 +31,7 @@ function Letter(character) {
 }
 
 Letter.prototype.toString = function() {
-  return this.isVisible || this.isWhitespace ? this.value : "_";
+  return this.isVisible || this.isWhitespace ? this.value : "-";
 };
 
 module.exports = Letter;
