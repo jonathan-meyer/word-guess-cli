@@ -6,9 +6,15 @@ describe("Letter", () => {
     expect(Letter("A")).toEqual(expect.any(Letter));
   });
 
-  it("should throw an error when a `character` is not given", () => {
+  it("should throw an error when `character` is not given", () => {
     expect(() => {
       new Letter();
+    }).toThrow();
+  });
+
+  it("should throw an error when `character` is longer than one character", () => {
+    expect(() => {
+      new Letter("AB");
     }).toThrow();
   });
 

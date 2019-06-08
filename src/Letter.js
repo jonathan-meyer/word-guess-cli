@@ -18,19 +18,14 @@ function Letter(character) {
     writable: false
   });
 
-  Object.defineProperty(this, "isVisible", {
-    get: () => {
-      return visible;
-    },
-    set: value => {
-      visible = value ? true : false;
-    }
+  Object.defineProperty(this, "isWhitespace", {
+    value: /^\s$/.test(character),
+    writable: false
   });
 
-  Object.defineProperty(this, "isWhitespace", {
-    get: () => {
-      return /^\s$/.test(character);
-    }
+  Object.defineProperty(this, "isVisible", {
+    get: () => visible,
+    set: value => (visible = value ? true : false)
   });
 }
 
