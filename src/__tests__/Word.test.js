@@ -42,4 +42,8 @@ describe("Word", () => {
     word.reveal("t");
     expect(word.isSolved).toBeTruthy();
   });
+
+  it("should have a length", () => {
+    expect(new Word("Fred").length).toBe(4);
+  });
 });

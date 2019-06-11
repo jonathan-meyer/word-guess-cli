@@ -19,6 +19,11 @@ function Word(word) {
     get: () => this.value.filter(l => !l.isVisible).length === 0,
     enumerable: true
   });
+
+  Object.defineProperty(this, "length", {
+    value: word.length,
+    writable: false
+  });
 }
 
 Word.prototype.toString = function() {
@@ -29,6 +34,10 @@ Word.prototype.reveal = function(letter) {
   this.value
     .filter(l => l.value.toLowerCase() === letter.toLowerCase())
     .map(l => (l.isVisible = true));
+};
+
+Word.prototype.revealAll = function() {
+  this.value.map(l => (l.isVisible = true));
 };
 
 module.exports = Word;

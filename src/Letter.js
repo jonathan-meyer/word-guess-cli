@@ -31,7 +31,7 @@ function Letter(character) {
 }
 
 Letter.prototype.toString = function() {
-  return this.isVisible || this.isWhitespace ? this.value : "-";
+  return this.isVisible || this.isWhitespace ? this.value : "_";
 };
 
 module.exports = Letter;
