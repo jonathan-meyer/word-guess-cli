@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/jonathan-meyer/word-guess-cli#readme",
   "dependencies": {
-    "blessed": "^0.1.81",
+    "chalk": "^2.4.2",
     "inquirer": "^6.3.1",
     "lodash": "^4.17.11"
   },

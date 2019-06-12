@@ -31,9 +31,11 @@ Word.prototype.toString = function() {
 };
 
 Word.prototype.reveal = function(letter) {
-  this.value
-    .filter(l => l.value.toLowerCase() === letter.toLowerCase())
-    .map(l => (l.isVisible = true));
+  return (
+    this.value
+      .filter(l => l.value.toLowerCase() === letter.toLowerCase())
+      .map(l => (l.isVisible = true)).length > 0
+  );
 };
 
 Word.prototype.revealAll = function() {
